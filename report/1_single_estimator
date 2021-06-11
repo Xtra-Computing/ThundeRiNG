@@ -1,0 +1,60 @@
+===============================================================================
+Version:    xocc v2018.3 (64-bit)
+Build:      SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+Copyright:  Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Sep 20 16:13:47 2020
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             data_flow
+Target Device:           xilinx:vcu1525:xdma:201830.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+data_flow    c     fpga0:OCL_REGION_0  data_flow       1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     data_flow
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name          Target Frequency  Estimated Frequency
+------------  -----------  -------------------  ----------------  -------------------
+data_flow_1   data_flow    data_flow_entry1046  300.300293        821.692688
+data_flow_1   data_flow    read_input61_0       300.300293        411.015198
+data_flow_1   data_flow    read_input_0         300.300293        411.015198
+data_flow_1   data_flow    merge                300.300293        411.015198
+data_flow_1   data_flow    rng_state_update     300.300293        463.606842
+data_flow_1   data_flow    reservoir_sampling   300.300293        411.015198
+data_flow_1   data_flow    write_result         300.300293        411.015198
+data_flow_1   data_flow    data_flow            300.300293        411.015198
+
+Latency Information (clock cycles)
+Compute Unit  Kernel Name  Module Name          Start Interval  Best Case  Avg Case  Worst Case
+------------  -----------  -------------------  --------------  ---------  --------  ----------
+data_flow_1   data_flow    data_flow_entry1046  0               0          0         0
+data_flow_1   data_flow    read_input61_0       4106            4106       4106      4106
+data_flow_1   data_flow    read_input_0         4106            4106       4106      4106
+data_flow_1   data_flow    merge                undef           undef      undef     undef
+data_flow_1   data_flow    rng_state_update     undef           undef      undef     undef
+data_flow_1   data_flow    reservoir_sampling   4110            4110       4110      4110
+data_flow_1   data_flow    write_result         4104            4104       4104      4104
+data_flow_1   data_flow    data_flow            undef           undef      undef     undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name          FF    LUT   DSP  BRAM
+------------  -----------  -------------------  ----  ----  ---  ----
+data_flow_1   data_flow    data_flow_entry1046  3     82    0    0
+data_flow_1   data_flow    read_input61_0       175   238   0    0
+data_flow_1   data_flow    read_input_0         174   220   0    0
+data_flow_1   data_flow    merge                137   284   0    0
+data_flow_1   data_flow    rng_state_update     671   394   10   0
+data_flow_1   data_flow    reservoir_sampling   2040  1964  8    0
+data_flow_1   data_flow    write_result         173   234   0    0
+data_flow_1   data_flow    data_flow            5321  6607  18   6
+-------------------------------------------------------------------------------

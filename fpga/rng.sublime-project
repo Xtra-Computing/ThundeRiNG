@@ -1,0 +1,31 @@
+{
+	"folders":
+	[
+        {
+            "file_exclude_patterns":
+            [
+                "*.log*",
+                "commented.tex*",
+                "*.csv",
+                "*.protoinst",
+                "*.wcfg",
+                "*.wdb",
+                "*.run_summary",
+                "*.app",
+
+            ],
+            "folder_exclude_patterns":
+            [
+                "_x",
+                "*.run",
+                "*.Xil",
+                "*_x.*",
+                "*build_dir.*",
+            ],
+            "path": "."
+        },
+		{
+			"path": "."
+		}
+	]
+}

@@ -1,0 +1,8 @@
+_x*
+build*
+*.app
+*.log
+*.run_summary
+*.run
+*.protoinst
+*.sublime-workspace

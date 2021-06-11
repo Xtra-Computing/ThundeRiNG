@@ -1,0 +1,63 @@
+-O3
+ref within 0.000000 ->2
+add within 0.000000 ->-1140464325016682494
+mult within 0.131563 ->-2401057354310221822
+mult add within 0.175207 ->3433796277295382530
+1 pcg time : 0.000075
+1 mpcg time : 0.000077
+2 pcg time : 0.000137
+2 mpcg time : 0.000110
+4 pcg time : 0.000240
+4 mpcg time : 0.000197
+8 pcg time : 0.000458
+8 mpcg time : 0.000472
+16 pcg time : 0.002369
+16 mpcg time : 0.003164
+32 pcg time : 0.003592
+32 mpcg time : 0.006701
+64 pcg time : 0.020505
+64 mpcg time : 0.040506
+128 pcg time : 0.080342
+128 mpcg time : 0.117055
+256 pcg time : 0.175972
+256 mpcg time : 0.249850
+512 pcg time : 0.481600
+512 mpcg time : 0.540811
+1024 pcg time : 0.902744
+1024 mpcg time : 0.919032
+2048 pcg time : 1.155524
+2048 mpcg time : 1.432861
+4096 pcg time : 2.718889
+4096 mpcg time : 2.947645
+
+-O0
+ref within 0.250990 ->2
+add within 0.292180 ->-1140464325016682494
+mult within 0.315584 ->-2401057354310221822
+mult add within 0.327490 ->3433796277295382530
+1 pcg time : 0.000378
+1 mpcg time : 0.000297
+2 pcg time : 0.000633
+2 mpcg time : 0.000541
+4 pcg time : 0.001138
+4 mpcg time : 0.001027
+8 pcg time : 0.002164
+8 mpcg time : 0.002035
+16 pcg time : 0.005363
+16 mpcg time : 0.008409
+32 pcg time : 0.010461
+32 mpcg time : 0.012156
+64 pcg time : 0.021858
+64 mpcg time : 0.025682
+128 pcg time : 0.048916
+128 mpcg time : 0.061932
+256 pcg time : 0.184301
+256 mpcg time : 0.198671
+512 pcg time : 0.269666
+512 mpcg time : 0.289356
+1024 pcg time : 0.622593
+1024 mpcg time : 0.608524
+2048 pcg time : 2.923171
+2048 mpcg time : 2.515936
+4096 pcg time : 8.820077
+4096 mpcg time : 7.792839

@@ -1,0 +1,75 @@
+===============================================================================
+Version:    xocc v2018.3 (64-bit)
+Build:      SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+Copyright:  Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Created:    Thu Oct  1 15:54:35 2020
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             data_flow
+Target Device:           xilinx:vcu1525:xdma:201830.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+data_flow    c     fpga0:OCL_REGION_0  data_flow       1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     data_flow
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                  Target Frequency  Estimated Frequency
+------------  -----------  ---------------------------  ----------------  -------------------
+data_flow_1   data_flow    data_flow_entry6             300.300293        821.692688
+data_flow_1   data_flow    read_input79_0               300.300293        411.015198
+data_flow_1   data_flow    read_input_0                 300.300293        411.015198
+data_flow_1   data_flow    merge                        300.300293        434.216248
+data_flow_1   data_flow    dummy_stream_unsigned_int_s  300.300293        821.692688
+data_flow_1   data_flow    rng_state_update             300.300293        463.606842
+data_flow_1   data_flow    first_edge_sampling          300.300293        411.692078
+data_flow_1   data_flow    reservoir_sampling80         300.300293        411.015198
+data_flow_1   data_flow    sink_stream_edge_t_81        300.300293        821.692688
+data_flow_1   data_flow    sink_stream_ap_uint_64_82    300.300293        821.692688
+data_flow_1   data_flow    sink_stream_ap_uint_32_83    300.300293        821.692688
+data_flow_1   data_flow    write_result84               300.300293        411.015198
+data_flow_1   data_flow    data_flow                    300.300293        411.015198
+
+Latency Information (clock cycles)
+Compute Unit  Kernel Name  Module Name                  Start Interval  Best Case  Avg Case  Worst Case
+------------  -----------  ---------------------------  --------------  ---------  --------  ----------
+data_flow_1   data_flow    data_flow_entry6             0               0          0         0
+data_flow_1   data_flow    read_input79_0               4106            4106       4106      4106
+data_flow_1   data_flow    read_input_0                 4106            4106       4106      4106
+data_flow_1   data_flow    merge                        4099            4099       4099      4099
+data_flow_1   data_flow    dummy_stream_unsigned_int_s  4098            4098       4098      4098
+data_flow_1   data_flow    rng_state_update             24578           24578      24578     24578
+data_flow_1   data_flow    first_edge_sampling          4104            4104       4104      4104
+data_flow_1   data_flow    reservoir_sampling80         4105            4105       4105      4105
+data_flow_1   data_flow    sink_stream_edge_t_81        4098            4098       4098      4098
+data_flow_1   data_flow    sink_stream_ap_uint_64_82    4098            4098       4098      4098
+data_flow_1   data_flow    sink_stream_ap_uint_32_83    4098            4098       4098      4098
+data_flow_1   data_flow    write_result84               4104            4104       4104      4104
+data_flow_1   data_flow    data_flow                    24579           24594      24594     24594
+
+Area Information
+Compute Unit  Kernel Name  Module Name                  FF    LUT   DSP  BRAM
+------------  -----------  ---------------------------  ----  ----  ---  ----
+data_flow_1   data_flow    data_flow_entry6             3     55    0    0
+data_flow_1   data_flow    read_input79_0               125   195   0    0
+data_flow_1   data_flow    read_input_0                 124   186   0    0
+data_flow_1   data_flow    merge                        86    232   0    0
+data_flow_1   data_flow    dummy_stream_unsigned_int_s  21    123   0    0
+data_flow_1   data_flow    rng_state_update             669   443   10   0
+data_flow_1   data_flow    first_edge_sampling          629   744   4    2
+data_flow_1   data_flow    reservoir_sampling80         1141  1276  4    0
+data_flow_1   data_flow    sink_stream_edge_t_81        20    125   0    0
+data_flow_1   data_flow    sink_stream_ap_uint_64_82    20    114   0    0
+data_flow_1   data_flow    sink_stream_ap_uint_32_83    20    114   0    0
+data_flow_1   data_flow    write_result84               123   200   0    0
+data_flow_1   data_flow    data_flow                    4940  7170  18   8
+-------------------------------------------------------------------------------
