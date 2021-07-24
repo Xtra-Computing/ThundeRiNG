@@ -5,7 +5,7 @@
 
 # Generating Multiple Independent Random Number Sequences on FPGAs
 
-## What's new?
+## What's New?
 
 ThunderRiNG is invited to be presented at [XACC Tech Talk](https://xilinx.github.io/xacc/xacc_tech_talks.html). [[Slides]](docs/slides.pdf)
 
@@ -13,7 +13,12 @@ ThunderRiNG is accepted by [ICS 2021](https://ics21.github.io/program). [[Paper]
 
 ## Introduction
 
-<img src="docs/imgs/overview.png" alt="drawing" width="600"/>
+ThundeRiNG is a high performance high quality pseudo random number generator (PRNG) that can concurrently generate massive number of independent sequences of random numbers. Our algorithm enables it to **pass the most stringent empirical statistical tests**, BigCrush (TestU01). 
+Meanwhile, with our state sharing and decorrelation methods, it **only consumes 0% BRAMs and 0.52% DSPs** and reserves nearly all these precious hardware resources to application processing logic, which further give the possibility to adopt more complex applications (i.e. Monte Carlo simulations) to FPGAs. 
+In our case studies, benefiting from ThundeRiNG's high performance and the pipelined generation of random number with the application processing, the two applications show a significant performance speedup over the corresponding implementation on NVIDIA P100 GPUs.
+
+<img src="docs/imgs/merged.png" alt="drawing" width="900"/>
+
 
 ## Prerequisites
 
@@ -39,10 +44,10 @@ sudo apt install gcc-9 g++-9
 ```
 * Following this [link](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vitis.html) to download and install Vitis 2020.2.
 * Install the XRT environment and U250's development shell from [here](https://www.xilinx.com/products/boards-and-kits/alveo/u250.html#gettingStarted).
-* **[option]** To support massive number of instances, we expand the limitation of maximum number of kernels in the original XRT. Please go [here](https://github.com/HongshiTan/XRT) to get and install our modified XRT runtime environment.
+* **[option]** To support massive number of instances, we expand the limitation of maximum number of OpenCL kernels in the original XRT. Please go [here](https://github.com/HongshiTan/XRT) to get and install our modified XRT runtime environment.
 
 
-## Run the code
+## Run the Code
 
 ``` shell 
 # setup Vitis/XRT env
@@ -54,8 +59,7 @@ source /path/to/vitis/2020.2/settings64.sh
 git clone git@github.com:Xtra-Computing/ThundeRiNG.git
 
 # compile the first demo
-cd ThundeRiNG
-cd fpga/rng/
+cd ThundeRiNG/fpga/rng
 make all -j4
 
 # [option] valid the design using waveform viewer
@@ -75,7 +79,7 @@ _**More demo is coming soon...**_
 | [PractRand](http://pracrand.sourceforge.net/) | intra-stream | >8TB|
 | BigCrush on interleaved sequence | inter-stream | Pass |
 | [PractRand](http://pracrand.sourceforge.net/) on interleaved sequence| inter-stream | >8TB|
-| Pairwise correlation analysis | inter-stream | ≈0 |
+| Pairwise correlation analysis | inter-stream | <3e-5 |
 | [Hamming weight dependency](https://xoshiro.di.unimi.it/hwd.php) | inter-stream | >1e+14| 
 
 
@@ -89,6 +93,12 @@ _**More demo is coming soon...**_
 * **Throughput of various GPU PRNG schemes running on Nvidia Tesla P100 compared to ThundeRiNG's throughput**
 
 <img src="docs/imgs/gpu.png" alt="drawing" width="600"/>
+
+### III. Case Study
+
+Comparison of execution time of estimation of pi and Monte Carlo option pricing on FPGA with ThundeRiNG with the corresponding GPU-based solution.
+
+<img src="docs/imgs/case.png" alt="drawing" width="900"/>
 
 
 ## Citation
@@ -107,16 +117,14 @@ If you find this repository useful, please cite our paper:
 ## Key members
 * Hongshi Tan, Xinyu Chen (NUS)
 * Advisor: [Bingsheng He](https://www.comp.nus.edu.sg/~hebs/) and [Weng-Fai Wong](https://www.comp.nus.edu.sg/~wongwf/), NUS
-* Collaborators: [Yao Chen (ADSC)](https://microideax.github.io/) and [Deming Chen (UIUC)](http://dchen.ece.illinois.edu/)
+* Collaborators: [Yao Chen (ADSC)](https://microideax.github.io/)
 
 
 ## Acknowledgement
 * [Xilinx Adaptive Compute Clusters (XACC) program](https://www.xilinx.com/support/university/XUP-XACC.html)
-* Singapore MoE Tier 2 grant (MOE2017-T2-1-122).
+* Singapore MoE Tier 2 grant (MOE2017-T2-1-122)
  
 
-
-## Usage
 ## File structure
 
 ``` shell 
@@ -130,5 +138,3 @@ If you find this repository useful, please cite our paper:
 └── test         # code for statistical tests
 ```
 
-## API
-__*Coming Soon*__
