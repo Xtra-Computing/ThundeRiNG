@@ -3,7 +3,7 @@
 [![GitHub license](https://img.shields.io/badge/license-apache2-yellowgreen)](./LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/Xtra-Computing/ThundeRiNG.svg)](https://github.com/Xtra-Computing/ThundeRiNG/issues)
 
-# Generating Multiple Independent Random Number Sequences on FPGAs
+# Fast Multiple Independent Random Number Sequences Generation on FPGAs
 
 ## What's New?
 
@@ -86,11 +86,21 @@ _**More demo is coming soon...**_
 
 ### II. Throughput
 
-* **Throughput, quality and resource utilization of the SOTA FPGA-based works and CPU-based designs**
+**a. Resource consumption and Throughput**
+
+ Following graph shows ThundeRiNG's resource consumption and throughput with increasing number of instances.
+
+<img src="docs/imgs/resource.png" alt="drawing" width="900"/>
+
+**b. Throughput speedup over FPGA-based PRNGs** 
+
+Comparison of throughput, quality and resource utilization of the state-of-the-art FPGA-based works and CPU-based designs with ThundeRiNG. Even with the most optimistic scaling with the available hardware resources, ThundeRiNG still can **outperform** existing PRNGs on FPGAs.
 
 <img src="docs/imgs/fpga.png" alt="drawing" width="600"/>
 
-* **Throughput of various GPU PRNG schemes running on Nvidia Tesla P100 compared to ThundeRiNG's throughput**
+**b. Throughput speedup over GPU-based PRNGs** 
+
+Throughput of various GPU PRNG schemes running on NVIDIA Tesla P100 compared to ThundeRiNG's throughput. Ours is at least **10x** faster than them.
 
 <img src="docs/imgs/gpu.png" alt="drawing" width="600"/>
 
@@ -102,7 +112,7 @@ Comparison of execution time of estimation of pi and Monte Carlo option pricing 
 
 
 ## Citation
-If you find this repository useful, please cite our paper:
+If you find this repository useful, please cite our [paper](https://dl.acm.org/doi/10.1145/3447818.3461664):
 
 ```
 @inproceedings{tan2021thundering,
