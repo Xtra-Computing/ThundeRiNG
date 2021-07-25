@@ -13,7 +13,7 @@
 
 ## Introduction
 
-**Want to get 655 billion random numbers per second on a single FPGA?**
+**ThundeRiNG can generate 655 billion random numbers per second on a single FPGA!**
 
 ThundeRiNG is a high performance and high quality FPGA-based pseudo random number generator (PRNG) that can concurrently generate massive number of independent sequences of random numbers. Our algorithm enables it to **pass the most stringent empirical statistical tests**, BigCrush (TestU01). 
 Meanwhile, with our state sharing and decorrelation methods, it **consumes 0 BRAM and only 0.52% DSPs** with any number of sequences to be generated and reserves nearly all these precious hardware resources to application processing logic, which further give the possibility to adopt more complex applications (i.e. Monte Carlo simulations) to FPGAs. 
