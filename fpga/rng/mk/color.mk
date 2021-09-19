@@ -11,3 +11,9 @@
 RED='\033[0;31m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
+PURPLE='\033[0;35m'
+
+LIGHT_GREEN='\033[1;32m'
+LIGHT_BLUE='\033[1;34m'
+
+LIGHT_RED='\033[1;31m'

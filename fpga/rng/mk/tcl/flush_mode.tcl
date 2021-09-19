@@ -1,0 +1,2 @@
+config_interface -m_axi_flush_mode=true
+config_interface -m_axi_latency 64
